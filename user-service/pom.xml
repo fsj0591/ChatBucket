@@ -9,13 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chat-service</artifactId>
+    <artifactId>user-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>chat-client</module>
-        <module>chat-sdk</module>
-        <module>chat-server</module>
-        <module>chat-server</module>
+        <module>user-client</module>
+        <module>user-sdk</module>
+        <module>user-server</module>
     </modules>
 
     <properties>
