@@ -8,9 +8,10 @@
     <modules>
         <module>gateway-service</module>
         <module>chat-service</module>
-        <module>resource-service</module>
+        <module>resource-starter</module>
         <module>user-service</module>
         <module>common</module>
+        <module>minio-demo</module>
     </modules>
     <name>ChatBucket</name>
     <description>ChatBucket 服务端</description>
