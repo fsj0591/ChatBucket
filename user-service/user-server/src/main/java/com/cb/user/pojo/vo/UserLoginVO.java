@@ -23,10 +23,10 @@ public class UserLoginVO {
     private String name;
 
     /**
-     * 手机号
+     * 邮箱
      */
-    @TableField("phone")
-    private String phone;
+    @TableField("mail")
+    private String mail;
 
     /**
      * 头像

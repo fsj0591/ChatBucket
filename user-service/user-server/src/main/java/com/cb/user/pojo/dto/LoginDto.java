@@ -6,9 +6,9 @@ import lombok.Data;
 public class LoginDto {
 
     /**
-     * 手机号
+     * 邮箱
      */
-    private String phone;
+    private String mail;
 
     /**
      * 密码

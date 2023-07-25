@@ -1,9 +1,6 @@
 package com.cb.user.pojo.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -41,10 +38,10 @@ public class User {
     private String password;
 
     /**
-     * 手机号
+     * 邮箱
      */
-    @TableField("phone")
-    private String phone;
+    @TableField("mail")
+    private String mail;
 
     /**
      * 头像
@@ -69,7 +66,7 @@ public class User {
     /**
      * 注册时间
      */
-    @TableField("created_time")
+    @TableField(fill = FieldFill.INSERT)
     private Date createdTime;
 
 }
