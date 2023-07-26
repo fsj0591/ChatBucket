@@ -17,7 +17,7 @@ public class AutoFillConfig implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject)
     {
         log.info("start insert fill.....");
-        this.setFieldValByName("createTime", new Timestamp(System.currentTimeMillis()), metaObject);
+        this.setFieldValByName("createdTime", new Timestamp(System.currentTimeMillis()), metaObject);
     }
 
     /**
@@ -27,7 +27,7 @@ public class AutoFillConfig implements MetaObjectHandler {
     public void updateFill(MetaObject metaObject)
     {
         log.info("start update fill.....");
-        this.setFieldValByName("updateTime", new Timestamp(System.currentTimeMillis()), metaObject);
+        this.setFieldValByName("updatedTime", new Timestamp(System.currentTimeMillis()), metaObject);
     }
 
 }

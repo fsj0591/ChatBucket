@@ -20,8 +20,6 @@ import java.util.List;
 
 /**
  * 全局异常处理
- *
- * @author durance
  */
 @Slf4j
 @RestControllerAdvice
