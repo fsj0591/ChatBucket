@@ -7,8 +7,6 @@ import java.lang.annotation.*;
 
 /**
  * Web程序异常捕获响应异常信息
- *
- * @author durance
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
