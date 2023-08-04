@@ -15,7 +15,6 @@
         <module>chat-client</module>
         <module>chat-sdk</module>
         <module>chat-server</module>
-        <module>chat-server</module>
     </modules>
 
     <properties>
