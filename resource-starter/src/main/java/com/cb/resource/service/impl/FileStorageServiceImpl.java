@@ -34,6 +34,8 @@ public class FileStorageServiceImpl implements FileStorageService {
     @Resource
     private MinIOConfigProperties minIOConfigProperties;
 
+    private final static String separator = "/";
+
     /**
      * 生成随机文件名
      *
@@ -77,7 +79,12 @@ public class FileStorageServiceImpl implements FileStorageService {
                     .build());
             // 需要手动关闭输入流
             inputStream.close();
-            return fileName;
+            // 返回文件路径
+            StringBuilder urlPath = new StringBuilder(minIOConfigProperties.getReadPath());
+            urlPath.append(separator+minIOConfigProperties.getBucket());
+            urlPath.append(separator);
+            urlPath.append(fileName);
+            return urlPath.toString();
             } catch (Exception e) {
                 e.printStackTrace();
                 throw new MinioException("文件上传异常");
