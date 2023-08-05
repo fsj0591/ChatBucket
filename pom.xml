@@ -11,7 +11,6 @@
         <module>resource-starter</module>
         <module>user-service</module>
         <module>common</module>
-        <module>chatgpt-service</module>
     </modules>
     <name>ChatBucket</name>
     <description>ChatBucket 服务端</description>

@@ -11,6 +11,26 @@
 
     <artifactId>chat-client</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.cb</groupId>
+            <artifactId>common-core</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cb</groupId>
+            <artifactId>common-data</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cb</groupId>
+            <artifactId>common-web</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
