@@ -1,6 +1,7 @@
 package com.cb.gateway.filter;
 
 import com.alibaba.nacos.api.utils.StringUtils;
+import com.cb.common.web.utils.UserInfoContext;
 import com.cb.gateway.config.JwtProperties;
 import com.cb.gateway.utils.JwtUtil;
 import io.jsonwebtoken.Claims;
