@@ -5,6 +5,8 @@ import com.cb.common.core.result.RestResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.TypeMismatchException;
 import org.springframework.http.converter.HttpMessageConversionException;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.HttpMediaTypeException;
@@ -97,6 +99,18 @@ public class GlobalExceptionHandler {
 	public RestResult<Object> doMaxUploadSizeExceededException(Exception e) {
 		log.warn("上传文件过大,{}", e.getMessage());
 		return new RestResult<>(403, "上传文件过大", null, false);
+	}
+
+	@ExceptionHandler(AccessDeniedException.class)
+	public RestResult<Object> doAccessDeniedException(AccessDeniedException e) {
+		log.warn("用户权限不足,{}", e.getMessage());
+		return new RestResult<>(403, "用户权限不足", null, false);
+	}
+
+	@ExceptionHandler(AuthenticationException.class)
+	public RestResult<Object> doAuthenticationException(AuthenticationException e) {
+		log.warn("用户认证失败,{}", e.getMessage());
+		return new RestResult<>(403, "用户认证失败", null, false);
 	}
 
 }
