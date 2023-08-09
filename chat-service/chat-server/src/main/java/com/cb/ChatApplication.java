@@ -3,6 +3,7 @@ package com.cb;
 import com.cb.common.data.annotation.EnableAutoFill;
 import com.cb.common.data.annotation.EnableRedisSerialize;
 import com.cb.common.web.annotation.EnableDefaultExceptionAdvice;
+import com.cb.common.web.annotation.EnableUserInfoTransmitter;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableDefaultExceptionAdvice
 @EnableAutoFill
 @EnableRedisSerialize
+@EnableUserInfoTransmitter
 public class ChatApplication {
 
 	public static void main(String[] args) {
