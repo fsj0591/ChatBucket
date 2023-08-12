@@ -1,4 +1,4 @@
-package com.cb.user.util;
+package com.cb.common.security.utils;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
