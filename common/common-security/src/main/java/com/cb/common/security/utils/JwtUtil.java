@@ -1,6 +1,5 @@
-package com.cb.gateway.utils;
+package com.cb.common.security.utils;
 
-import com.cb.gateway.config.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;

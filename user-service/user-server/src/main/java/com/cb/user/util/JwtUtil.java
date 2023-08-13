@@ -1,5 +1,6 @@
 package com.cb.user.util;
 
+import com.cb.common.security.utils.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
