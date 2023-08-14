@@ -15,6 +15,7 @@
         <module>common-core</module>
         <module>common-data</module>
         <module>common-web</module>
+        <module>common-security</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
