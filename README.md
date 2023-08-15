@@ -49,10 +49,6 @@
 
 - chat-service：聊天服务
 
-通用部分
-server 服务后端
-sdk 服务软件开发包
-client 服务客户端
 
 
 
