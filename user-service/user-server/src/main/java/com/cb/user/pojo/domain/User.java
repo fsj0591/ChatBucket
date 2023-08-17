@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 @Data
 @AllArgsConstructor
@@ -18,12 +18,6 @@ public class User {
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
-
-    /**
-     * 密码、通信等加密盐
-     */
-    @TableField("salt")
-    private String salt;
 
     /**
      * 用户名
@@ -64,9 +58,15 @@ public class User {
     private Boolean identity;
 
     /**
+     * 贵宾到期时间
+     */
+    @TableField("vip")
+    private Timestamp vip;
+
+    /**
      * 注册时间
      */
     @TableField(fill = FieldFill.INSERT)
-    private Date createdTime;
+    private Timestamp createdTime;
 
 }

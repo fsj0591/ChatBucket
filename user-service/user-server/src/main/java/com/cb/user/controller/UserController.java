@@ -2,18 +2,15 @@ package com.cb.user.controller;
 
 import com.alibaba.nacos.common.utils.StringUtils;
 import com.cb.common.core.result.RestResult;
-import com.cb.user.exception.UserException;
 import com.cb.user.pojo.domain.Mail;
 import com.cb.user.pojo.domain.User;
 import com.cb.user.pojo.dto.LoginDto;
 import com.cb.user.service.UserService;
 import com.cb.user.util.MailUtils;
 import com.sun.istack.internal.NotNull;
-import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 @RestController
@@ -71,18 +68,15 @@ public class UserController {
         return RestResult.ok(null, "发送成功");
     }
 
+
     /**
      * 注销
      *
-     * @param request 请求
      * @return {@link RestResult}<{@link ?}>
      */
     @PostMapping("logout")
-    public RestResult<?> logout(HttpServletRequest request){
-        if(request==null){
-            throw new UserException("获取用户信息异常");
-        }
-        return RestResult.ok(userService.logout(request));
+    public RestResult<?> logout(){
+        return RestResult.ok(userService.logout());
     }
 
 }

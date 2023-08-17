@@ -32,7 +32,9 @@ public interface UserService extends IService<User> {
 
     boolean updateUserInfo(Integer userId, User user);
 
-    boolean logout(HttpServletRequest request);
+    boolean logout();
 
     UserLoginVO getUserInfo(Integer userId);
+
+    boolean createVIP(Integer userId, Integer cycle);
 }
