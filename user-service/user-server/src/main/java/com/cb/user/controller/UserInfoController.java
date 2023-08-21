@@ -5,6 +5,7 @@ import com.cb.user.exception.UserException;
 import com.cb.user.pojo.domain.User;
 import com.cb.user.pojo.vo.UserLoginVO;
 import com.cb.user.service.UserService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -39,6 +40,7 @@ public class UserInfoController {
      * @return {@link RestResult}<{@link String}>
      */
     @PostMapping("avatar")
+    @PreAuthorize("@ssc.hasAuthority('user')")
     public RestResult<String> updateAvatar(@RequestHeader Integer userId, MultipartFile file){
         if(file.isEmpty()){
             throw new UserException("上传头像不能为空");
@@ -61,6 +63,22 @@ public class UserInfoController {
             throw new UserException("获取用户信息异常");
         }
         return RestResult.ok(userService.updateUserInfo(userId, user));
+    }
+
+
+    /**
+     * 创建贵宾
+     *
+     * @param userId 用户id
+     * @param cycle  周期
+     * @return {@link RestResult}<{@link Boolean}>
+     */
+    @PostMapping("vip")
+    public RestResult<Boolean> createVIP(@RequestHeader Integer userId, Integer cycle){
+        if(userId==null){
+            throw new UserException("获取用户信息异常");
+        }
+        return RestResult.ok(userService.createVIP(userId, cycle));
     }
 
 }
