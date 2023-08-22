@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: user-server
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      config:
+        shared-configs:
+          - data-id: public-mybatis-plus.yaml
+            refresh: true
+          - data-id: user-server.yaml
+            refresh: true
+          - data-id: common-security.yaml
+            refresh: true
+          - data-id: default-redis.yaml
+            refresh: true
+          - data-id: minio.yaml
+            refresh: true

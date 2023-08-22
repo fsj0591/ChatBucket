@@ -1,0 +1,14 @@
+server:
+  port: 8002
+## openAi访问地址，直接访问不通，需要搭建nginx代理进行访问
+open:
+  ai:
+    url: https://api.openai-proxy.com/
+    ## API-Key
+    token: xxx
+## 连续会话有效时间（单位:小时）
+session:
+  time: 4
+## token长度，结果返回的长度
+token:
+  num: 1000
